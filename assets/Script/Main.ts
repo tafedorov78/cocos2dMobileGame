@@ -13,14 +13,27 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class NewClass extends cc.Component {
 
-   @property(cc.PhysicsCircleCollider)
-   ball:cc.PhysicsCircleCollider = null;
+    ballRigidBody: cc.RigidBody;
+    ballCollider: cc.PhysicsCircleCollider;
+
+   @property(cc.Node)
+   ball:cc.Node = null;
     // LIFE-CYCLE CALLBACKS:
 
      onLoad () {
          cc.director.getPhysicsManager().enabled = true;
-         this.ball.restitution = 0.6;
+         this.ballRigidBody = this.ball.getComponent(cc.RigidBody);
+         this.ballCollider = this.ball.getComponent('cc.PhysicsCircleCollider');
+         this.ballCollider.restitution = 0.6;
+         this.ball.on('touchmove', this.onBallTouchHandler.bind(this));
      }
+
+
+    onBallTouchHandler(e: any): void {
+         let localCenter: cc.Vec2 = this.ballRigidBody.getLocalCenter();
+         console.log('asd');
+         this.ballRigidBody.applyLinearImpulse(cc.v2(1000, 0), localCenter, true);
+    }
 
     start () {
 
