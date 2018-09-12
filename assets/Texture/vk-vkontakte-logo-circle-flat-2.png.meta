@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "f256a3c8-be4d-4915-ba05-41a384de4a8e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "vk-vkontakte-logo-circle-flat-2": {
+      "ver": "1.0.3",
+      "uuid": "13ee93d9-b971-45d5-ac3e-2bba6ee61072",
+      "rawTextureUuid": "f256a3c8-be4d-4915-ba05-41a384de4a8e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 256,
+      "height": 256,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
